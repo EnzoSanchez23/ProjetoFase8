@@ -6,6 +6,7 @@ Rails.application.routes.draw do
     namespace :v1 , path: "/", constraints:ApiVersionConstraint.new(verison: 1, default: true)do
       resources :users
       resources :sessions
+      resources :gains
     end
   end
 
