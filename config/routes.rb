@@ -7,6 +7,7 @@ Rails.application.routes.draw do
       resources :users
       resources :sessions
       resources :gains
+      resources :outlay
     end
   end
 
