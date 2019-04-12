@@ -21,7 +21,7 @@ class Api::V1::GainsController < ApplicationController
     end
 
     def destroy
-        gain = current_user.gains(gains_params)
+        gain = current_user.gains.find(params[:id])
         gains.destroy
         head 204
     end

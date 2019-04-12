@@ -21,7 +21,7 @@ class Api::V1::OutlaysController < ApplicationController
     end
 
     def destroy
-        outlay = current_user.outlays(outlays_params)
+        outlay = current_user.outlays.find(params[:id])
         outlays.destroy
         head 204
     end
