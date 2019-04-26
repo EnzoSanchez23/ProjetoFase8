@@ -2,7 +2,7 @@ class Api::V2::OutlaysController < ApplicationController
     before_action :authenticate_with_token!
 
     def index
-        outlays = current_user.outlays
+        outlays = current_user.outlays.ransack(params[:q]).result
         render json: {gains:gains}, status: 200
     end
 
