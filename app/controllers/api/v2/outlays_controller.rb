@@ -1,5 +1,5 @@
-class Api::V2::OutlaysController < ApplicationController
-    before_action :authenticate_with_token!
+class Api::V2::OutlaysController < BaseController
+    before_action :authenticate_user!
 
     def index
         outlays = current_user.outlays.ransack(params[:q]).result

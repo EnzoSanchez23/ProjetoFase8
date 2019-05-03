@@ -1,4 +1,4 @@
-class Api::V1::GainsController < ApplicationController
+class Api::V1::GainsController < BaseController
     before_action :authenticate_with_token!
 
     def index
