@@ -3,8 +3,8 @@ allow do
     origins '*'
 
     resource '*',
-        :headers: :any,
-        :expose => ['access-token, 'expiry', ' toke-type', 'vid', 'client']
-        :methods => [:get, :post, :put, :delete, :options,]
-  end
+        :headers => :any,
+        :expose => ['access-token', 'expiry', ' toke-type', 'vid', 'client'],
+        :methods => [:get, :post, :put, :delete, :options]
+    end
 end

@@ -30,6 +30,7 @@ gem 'ransack'
 gem 'rack-cors'
 gem 'devise_token_auth'
 gem 'omniauth'
+gem 'rails-i18n', '~> 5.0.0'
 
 
 group :development, :test do
